@@ -7,12 +7,11 @@ import TitleCategory from '../components/TitleCategory';
 import Catalog from '../section/Catalog';
 import InfoSection from '../section/InfoSection';
 import FooterSection from '../section/FootersSection';
-import CategoryItem from '../components/CategoryItem';
 import Store from '../section/Store';
 
 const inter = Inter({ subsets: ['latin'] });
 
-export default function Home() {
+export default function catalog() {
   return (
     <>
       <Head>
@@ -21,14 +20,17 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className=" relative">
+      <main className=" relative bg-background">
         <div className="hidden md:block gradient-02 inset-01 absolute w-[50%]" />
         <Headers />
         <Navbar />
         <CategorySection />
         <div className="hidden md:block gradient-02 inset-0 absolute w-[50%]" />
         <TitleCategory />
-        <CategoryItem />
+        <Catalog />
+        <div className="relative">
+          <Store />
+        </div>
         <div className="py-12">
           <InfoSection />
         </div>

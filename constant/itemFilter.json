@@ -1,0 +1,82 @@
+[
+    {   
+        "title" : "Гербіциди",
+        "count":23,
+        "active":true
+    },  
+    {   
+        "title" : "Фунгіциди",
+        "count":23,
+        "active":false
+    },  
+    {   
+        "title" : "Інсектициди",
+        "count":23,
+        "active":false
+    },  
+    {   
+        "title" : "Десиканти",
+        "count":243,
+        "active":false
+    },  
+    {   
+        "title" : "Протруювачі",
+        "count":123,
+        "active":false
+    },  
+    {   
+        "title" : "Ад’юванти",
+        "count":223,
+        "active":false
+    },  
+    {   
+        "title" : "Родентициди",
+        "count":263,
+        "active":false
+    },  
+    {   
+        "title" : "Ретарданти",
+        "count":213,
+        "active":false
+    },{   
+        "title" : "Гербіциди",
+        "count":23,
+        "active":true
+    },  
+    {   
+        "title" : "Фунгіциди",
+        "count":23,
+        "active":false
+    },  
+    {   
+        "title" : "Інсектициди",
+        "count":23,
+        "active":false
+    },  
+    {   
+        "title" : "Десиканти",
+        "count":243,
+        "active":false
+    },  
+    {   
+        "title" : "Протруювачі",
+        "count":123,
+        "active":false
+    },  
+    {   
+        "title" : "Ад’юванти",
+        "count":223,
+        "active":false
+    },  
+    {   
+        "title" : "Родентициди",
+        "count":263,
+        "active":false
+    },  
+    {   
+        "title" : "Ретарданти",
+        "count":213,
+        "active":false
+    }
+]
+
