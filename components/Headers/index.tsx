@@ -8,7 +8,7 @@ const Headers = (props: HeadersProps) => {
     <header aria-label="Site Header" className="bg-green">
       <div className="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
         <a className="hidden md:block text-white" href="/">
-          <p>Про нас</p>
+          <p>Home</p>
         </a>
 
         <div className="flex flex-1 md:divide-x divide-solid divide-white items-center  justify-start md:justify-end md:justify-between">
@@ -17,41 +17,9 @@ const Headers = (props: HeadersProps) => {
               <li>
                 <Link
                   className="text-white transition hover:text-gray-500/75"
-                  href="/"
+                  href="/catalog"
                 >
-                  Каталог продукції
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="text-white transition hover:text-gray-500/75"
-                  href="/"
-                >
-                  Оплата і доставка
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="text-white transition hover:text-gray-500/75"
-                  href="/"
-                >
-                  Партнери
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="text-white transition hover:text-gray-500/75"
-                  href="/"
-                >
-                  Новини
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="text-white transition hover:text-gray-500/75"
-                  href="/"
-                >
-                  Контакти
+                  Category
                 </Link>
               </li>
             </ul>

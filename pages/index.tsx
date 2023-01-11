@@ -8,7 +8,8 @@ import Catalog from '../section/Catalog';
 import InfoSection from '../section/InfoSection';
 import FooterSection from '../section/FootersSection';
 import CategoryItem from '../components/CategoryItem';
-import Store from '../section/Store';
+import { asyncSetAllProduct } from '../states/Product/action';
+import { useAppDispatch } from '../states';
 
 const inter = Inter({ subsets: ['latin'] });
 

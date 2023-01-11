@@ -8,9 +8,9 @@ const TitleCategory = (props: TitleCategoryProps) => {
     <section className="flex  justify-center">
       <div>
         <div className="hidden md:block md:flex md:justify-center">
-          <p>Головна * </p> <p>Каталог * </p> <p>рослин * </p>
+          <p>Toost</p> <p>Teeest </p> <p>Test </p>
         </div>
-        <Title text="Засоби захисту рослин" />
+        <Title text="TEST" />
       </div>
     </section>
   );

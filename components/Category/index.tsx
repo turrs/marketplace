@@ -9,7 +9,7 @@ const Category = (props: CategoryProps) => {
         <img src="/icon/seeds2.svg" className="w-[24px] h-[24px] " />
       </div>
       <div className="2">
-        <p className="font-bold">Насіння</p>
+        <p className="font-bold">Kategori</p>
       </div>
     </div>
   );

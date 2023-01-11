@@ -4,7 +4,6 @@ import itemJson from '../../constant/itemFilter.json';
 type ItemFilterCatalogProps = {};
 
 const ItemFilterCatalog = (active: ItemFilterCatalogProps) => {
-  console.log(itemJson);
   return (
     <div className="flex flex-col drop-shadow-lg items-center justify-center bg-white rounded-[24px] w-full py-3 px-6">
       {itemJson.map((item) => (

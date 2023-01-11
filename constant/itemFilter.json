@@ -1,82 +1,56 @@
 [
     {   
-        "title" : "Гербіциди",
+        "title" : "test item 1",
         "count":23,
         "active":true
-    },  
-    {   
-        "title" : "Фунгіциди",
+    }, {   
+        "title" : "test item 1",
         "count":23,
         "active":false
-    },  
-    {   
-        "title" : "Інсектициди",
-        "count":23,
-        "active":false
-    },  
-    {   
-        "title" : "Десиканти",
-        "count":243,
-        "active":false
-    },  
-    {   
-        "title" : "Протруювачі",
-        "count":123,
-        "active":false
-    },  
-    {   
-        "title" : "Ад’юванти",
-        "count":223,
-        "active":false
-    },  
-    {   
-        "title" : "Родентициди",
-        "count":263,
-        "active":false
-    },  
-    {   
-        "title" : "Ретарданти",
-        "count":213,
-        "active":false
-    },{   
-        "title" : "Гербіциди",
+    }, {   
+        "title" : "test item 1",
         "count":23,
         "active":true
-    },  
-    {   
-        "title" : "Фунгіциди",
+    }, {   
+        "title" : "test item 1",
         "count":23,
         "active":false
-    },  
-    {   
-        "title" : "Інсектициди",
+    }, {   
+        "title" : "test item 1",
         "count":23,
         "active":false
-    },  
-    {   
-        "title" : "Десиканти",
-        "count":243,
+    }, {   
+        "title" : "test item 1",
+        "count":23,
+        "active":true
+    }, {   
+        "title" : "test item 1",
+        "count":23,
+        "active":true
+    }, {   
+        "title" : "test item 1",
+        "count":23,
+        "active":true
+    }, {   
+        "title" : "test item 1",
+        "count":23,
+        "active":true
+    }, {   
+        "title" : "test item 1",
+        "count":23,
+        "active":true
+    }, {   
+        "title" : "test item 1",
+        "count":23,
+        "active":true
+    }, {   
+        "title" : "test item 1",
+        "count":23,
         "active":false
-    },  
-    {   
-        "title" : "Протруювачі",
-        "count":123,
-        "active":false
-    },  
-    {   
-        "title" : "Ад’юванти",
-        "count":223,
-        "active":false
-    },  
-    {   
-        "title" : "Родентициди",
-        "count":263,
-        "active":false
-    },  
-    {   
-        "title" : "Ретарданти",
-        "count":213,
-        "active":false
+    }, {   
+        "title" : "test item 1",
+        "count":23,
+        "active":true
     }
 ]
 

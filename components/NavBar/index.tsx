@@ -28,9 +28,7 @@ const Navbar = (props: NavbarProps) => {
               <p className="font-bold">+38 (067) 115 00 58</p>
             </div>
             <div>
-              <p className="text-jingga font-bold">
-                Замовити зворотній зв’язок
-              </p>
+              <p className="text-jingga font-bold">Test</p>
             </div>
           </div>
         </div>
@@ -45,7 +43,7 @@ const Navbar = (props: NavbarProps) => {
             <MenuIcon count={2} />
           </div>
           <p className="text-black text-[12px] md:text-[16px] font-extrabold">
-            0,0 грн
+            20.000.000 IDR
           </p>
         </div>
       </div>
