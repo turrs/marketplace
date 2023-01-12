@@ -14,7 +14,6 @@ const Store = (props: StoreProps) => {
     dispatch(asyncSetAllProduct());
   };
   const dataProduct = useAppSelector((state) => state.product);
-  console.log(55, dataProduct);
 
   useEffect(() => {
     getProductData();
@@ -25,7 +24,6 @@ const Store = (props: StoreProps) => {
         <div className="hidden md:block md:py-5   w-[33.33%]">
           <ItemFilterCatalog />
           <div className="py-5" />
-          <FilterSource />
         </div>
         <div className="flex w-full flex-wrap  ">
           {dataProduct.map((item: any) => (

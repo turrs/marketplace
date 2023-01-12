@@ -28,7 +28,7 @@ export default function Home() {
         <Navbar />
         <CategorySection />
         <div className="hidden md:block gradient-02 inset-0 absolute w-[50%]" />
-        <TitleCategory />
+        <TitleCategory text="Home" />
         <CategoryItem />
         <div className="py-12">
           <InfoSection />

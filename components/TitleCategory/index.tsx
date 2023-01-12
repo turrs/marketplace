@@ -1,16 +1,15 @@
 import React from 'react';
 import Title from '../Title';
 
-type TitleCategoryProps = {};
+type TitleCategoryProps = {
+  text: string;
+};
 
-const TitleCategory = (props: TitleCategoryProps) => {
+const TitleCategory = ({ text }: TitleCategoryProps) => {
   return (
     <section className="flex  justify-center">
       <div>
-        <div className="hidden md:block md:flex md:justify-center">
-          <p>Toost</p> <p>Teeest </p> <p>Test </p>
-        </div>
-        <Title text="TEST" />
+        <Title text={text} />
       </div>
     </section>
   );

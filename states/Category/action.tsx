@@ -15,9 +15,9 @@ function setAllCategory(data: any) {
 
 function asyncSetAllCategory() {
   return async (AppDispatch: any) => {
-    const response = ApiCategory.getAllCategory();
+    const response = await ApiCategory.getAllCategory();
     AppDispatch(setAllCategory(response));
   };
 }
 
-export { TypeAction, setAllCategory };
+export { TypeAction, setAllCategory, asyncSetAllCategory };

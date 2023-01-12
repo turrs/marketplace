@@ -29,10 +29,10 @@ const Headers = (props: HeadersProps) => {
             <div className="sm:flex  w-full sm:gap-4">
               <Link
                 className="block flex items-center flex-row rounded-md px-5 py-2.5 text-sm font-medium text-white transition hover:bg-teal-700"
-                href="/"
+                href="/login"
               >
                 <img src="/icon/logout.svg" className="p-2" />
-                Вхід | Реестрація
+                User | Logout
               </Link>
             </div>
 

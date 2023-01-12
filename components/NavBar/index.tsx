@@ -11,8 +11,8 @@ const Navbar = (props: NavbarProps) => {
     <section className={`${styles.xPaddings} py-5 relative  `}>
       <div className="w-1/2 flex flex-row items-center  md:justify-between">
         <img
-          src="/icon/logo.svg"
-          className="object-contain w-[105px] h-[48px] md:w-[160px] md:h-[70px]"
+          src="/icon/logo.png"
+          className="object-contain w-[105px] h-[48px] md:w-[300px] md:h-[70px]"
         />
         <div className="hidden md:block">
           <SearchBar />
@@ -36,12 +36,7 @@ const Navbar = (props: NavbarProps) => {
           <div className="hidden md:block">
             <MenuIcon count={0} />
           </div>
-          <div className="">
-            <MenuIcon count={1} />
-          </div>
-          <div className=" p-2">
-            <MenuIcon count={2} />
-          </div>
+
           <p className="text-black text-[12px] md:text-[16px] font-extrabold">
             20.000.000 IDR
           </p>

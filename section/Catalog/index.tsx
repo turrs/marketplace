@@ -13,9 +13,7 @@ const Catalog = (props: CatalogProps) => {
       <div className="flex flex-col w-full">
         <div className="flex flex-row md:justify-between items-center justify-center w-full">
           <div>
-            <p className=" hidden md:block  text-gray font-normal">
-              621 Product
-            </p>
+            <p className=" hidden md:block   font-normal">621 Product</p>
           </div>
           <div className="flex justify-center ">
             <FilterCatalog />

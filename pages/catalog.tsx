@@ -26,7 +26,7 @@ export default function catalog() {
         <Navbar />
         <CategorySection />
         <div className="hidden md:block gradient-02 inset-0 absolute w-[50%]" />
-        <TitleCategory />
+        <TitleCategory text="Catalog" />
         <Catalog />
         <div className="relative">
           <Store />

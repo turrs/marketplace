@@ -6,7 +6,6 @@ type ItemProps = {
 };
 
 const Item = ({ active, data }: ItemProps) => {
-  console.log(22, data);
   return (
     <div className="  flex relative flex-col w-full bg-white rounded-[24px]  ">
       <img src="./icon/iconscales.svg" className="absolute right-0 p-5" />
