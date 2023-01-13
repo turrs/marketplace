@@ -1,12 +1,20 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { productReducer } from './Product/reducer';
-import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
+import {
+  TypedUseSelectorHook,
+  useDispatch,
+  useSelector as useReduxSelector,
+  useSelector,
+} from 'react-redux';
 import { categoryReducer } from './Category/reducer';
+import { userReducer, usersLoginReducer } from './User/reducer';
 
 const store = configureStore({
   reducer: {
     product: productReducer,
     category: categoryReducer,
+    users: userReducer,
+    usersLogin: usersLoginReducer,
   },
 });
 

@@ -9,12 +9,50 @@ import InfoSection from '../section/InfoSection';
 import FooterSection from '../section/FootersSection';
 import CategoryItem from '../components/CategoryItem';
 import { asyncSetAllProduct } from '../states/Product/action';
-import { useAppDispatch } from '../states';
+import { RootState, useAppDispatch, useAppSelector } from '../states';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
+import {
+  asyncGetAllUsers,
+  asyncSetLogin,
+  saveAccessToken,
+  setUserLogin,
+} from '../states/User/action';
+import { useRouter } from 'next/router';
+import { useSelector } from 'react-redux';
 
-type loginProps = {};
+type LoginProps = {};
 
-const login = (props: loginProps) => {
+const Login = (props: LoginProps) => {
+  const useRouters = useRouter();
+  const dispatch = useAppDispatch();
+  const [inputLogin, setInputLogin] = useState<any>({
+    userName: '',
+    password: '',
+  });
+  const allUsers = useAppSelector((state) => state.users);
+  const handleLogin = async (userName: any, password: any, allUsers: any) => {
+    const token = await asyncSetLogin(userName, password);
+    if (token) {
+      saveAccessToken(token);
+      const data = allUsers.find(
+        (element: any) => element.username === userName,
+      );
+      if (data) {
+        dispatch(setUserLogin(data));
+        useRouters.push('/catalog');
+      }
+    } else {
+      console.log('login gagal');
+    }
+  };
+  const getAllUser = async () => {
+    dispatch(asyncGetAllUsers());
+  };
+  useEffect(() => {
+    getAllUser();
+  }, []);
+
   return (
     <>
       <Head>
@@ -37,6 +75,13 @@ const login = (props: loginProps) => {
                 className="border border-gray-400 p-2 rounded-lg w-full"
                 type="email"
                 id="email"
+                value={inputLogin.userName}
+                onChange={(e) =>
+                  setInputLogin({
+                    userName: e.target.value,
+                    password: inputLogin.password,
+                  })
+                }
                 name="email"
               />
             </div>
@@ -49,6 +94,13 @@ const login = (props: loginProps) => {
                 type="password"
                 id="password"
                 name="password"
+                value={inputLogin.password}
+                onChange={(e) =>
+                  setInputLogin({
+                    userName: inputLogin.userName,
+                    password: e.target.value,
+                  })
+                }
               />
             </div>
             <Link href="/register">
@@ -56,7 +108,12 @@ const login = (props: loginProps) => {
                 Register
               </label>
             </Link>
-            <button className="bg-jingga text-white py-2 px-4 rounded-lg hover:bg-indigo-600">
+            <button
+              onClick={() =>
+                handleLogin(inputLogin.userName, inputLogin.password, allUsers)
+              }
+              className="bg-jingga text-white py-2 px-4 rounded-lg hover:bg-indigo-600"
+            >
               Login
             </button>
           </div>
@@ -70,4 +127,4 @@ const login = (props: loginProps) => {
   );
 };
 
-export default login;
+export default Login;

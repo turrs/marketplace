@@ -8,7 +8,6 @@ const ItemDescription = (props: ItemDescriptionProps) => {
   const [active, setActive] = useState<any | null>('description');
   const [showModal, setShowModal] = useState<any | null>(false);
   const changeTab = (value: String) => {
-    console.log(value);
     switch (value) {
       case 'description':
         setActive(value);
