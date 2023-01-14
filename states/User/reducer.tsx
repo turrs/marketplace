@@ -11,7 +11,7 @@ function userReducer(userState = initialState, action: UserActionTypes) {
   }
 }
 
-const initialStateUsers = [{}];
+const initialStateUsers: any = {};
 function usersLoginReducer(
   usersLogin = initialStateUsers,
   action: UserLoginActionTypes,

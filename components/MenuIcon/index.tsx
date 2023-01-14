@@ -12,7 +12,7 @@ const MenuIcon = ({ count }: MenuIconProps) => {
           <p className="text-[12px] text-white">{count}</p>
         </div>
       )}
-      <img src="/icon/iconexample.svg" />
+      <img src="/icon/cart.svg" />
     </div>
   );
 };

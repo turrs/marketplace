@@ -4,6 +4,7 @@ import { getAccessToken, setDeleteUserLogin } from '../../states/User/action';
 import { useSelector } from 'react-redux';
 import { useAppDispatch, useAppSelector } from '../../states';
 import { useRouter } from 'next/router';
+import { setDeleteAllCart } from '../../states/Cart/action';
 
 type HeadersProps = {};
 
@@ -17,6 +18,7 @@ const Headers = (props: HeadersProps) => {
   const dispatch = useAppDispatch();
   const handleLogout = () => {
     dispatch(setDeleteUserLogin());
+    dispatch(setDeleteAllCart());
     route.push('/login');
   };
   useEffect(() => {
@@ -46,10 +48,10 @@ const Headers = (props: HeadersProps) => {
           <div className="flex justify-between  w-full md:w-[400px]  items-center gap-4 ">
             <div className="sm:flex  w-full sm:gap-4">
               <div
-                className="block flex items-center flex-row rounded-md px-5 py-2.5 text-sm font-medium text-white transition hover:bg-teal-700"
+                className="block flex items-center flex-row rounded-md px-5 py-2.5 text-sm font-medium text-white transition hover:bg-jingga hover:cursor-pointer"
                 onClick={handleLogout}
               >
-                <img src="/icon/logout.svg" className="p-2" />
+                <img src="/icon/logout2.svg" className="p-2" />
                 {users.username} |{' '}
                 {users.username === undefined ? 'Login' : 'Logout'}
               </div>

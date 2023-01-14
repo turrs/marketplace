@@ -9,7 +9,7 @@ import ItemDetail from '../../components/ItemDetail';
 
 type itemProps = {};
 
-const item = (props: itemProps) => {
+const product = (props: itemProps) => {
   return (
     <>
       <Head>
@@ -22,7 +22,6 @@ const item = (props: itemProps) => {
         <div className="hidden md:block gradient-02 inset-01 absolute w-[50%]" />
         <Headers />
         <Navbar />
-        <CategorySection />
         <div className="hidden md:block gradient-02 inset-0 absolute w-[50%]" />
         <div className="py-20">
           <ItemDetail />
@@ -33,4 +32,4 @@ const item = (props: itemProps) => {
   );
 };
 
-export default item;
+export default product;

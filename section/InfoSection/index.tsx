@@ -11,14 +11,14 @@ const InfoSection = (props: InfoSectionProps) => {
           objectFit="cover"
           layout="fill"
           className="object-center  object-cover pointer-events-none"
-          src="/icon/testtt.avif"
+          src="/icon/footer3.jpg"
           alt="test"
         />
       </div>
       <div className="">
         <div className="relative flex flex-row md:justify-center items-center">
           <img src="./icon/iconsection.svg" className="p-2" />
-          <p className="text-white font-extrabold text-4xl">
+          <p className=" text-green font-extrabold text-4xl">
             Marketplace information
           </p>
         </div>

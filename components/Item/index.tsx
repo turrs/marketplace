@@ -7,7 +7,7 @@ type ItemProps = {
 
 const Item = ({ active, data }: ItemProps) => {
   return (
-    <div className="  flex relative flex-col w-full bg-white rounded-[24px]  ">
+    <div className="shadow-[0_3px_10px_rgb(0,0,0,0.2)]  flex relative flex-col w-full bg-white rounded-[24px]  ">
       <img src="./icon/iconscales.svg" className="absolute right-0 p-5" />
       <div className="flex justify-center py-16 w-full h-[300px]">
         <img src={data.image} className="w-[100px] " />
@@ -34,7 +34,7 @@ const Item = ({ active, data }: ItemProps) => {
                 <div
                   className={`${
                     active ? 'bg-brown' : ' bg-white'
-                  } rounded-full p-3 `}
+                  } rounded-full p-3 hover:cursor-pointer`}
                 >
                   {active ? (
                     <img src="./icon/cartactive.svg"></img>

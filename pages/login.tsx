@@ -20,6 +20,7 @@ import {
 } from '../states/User/action';
 import { useRouter } from 'next/router';
 import { useSelector } from 'react-redux';
+import { asyncGetAllCartUser } from '../states/Cart/action';
 
 type LoginProps = {};
 
@@ -40,6 +41,7 @@ const Login = (props: LoginProps) => {
       );
       if (data) {
         dispatch(setUserLogin(data));
+        dispatch(asyncGetAllCartUser(data.id));
         useRouters.push('/catalog');
       }
     } else {

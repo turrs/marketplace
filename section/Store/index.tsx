@@ -6,6 +6,7 @@ import styles from '../../styles';
 import itemJson from '../../constant/itemFilter.json';
 import { useAppDispatch, useAppSelector } from '../../states';
 import { asyncSetAllProduct } from '../../states/Product/action';
+import Link from 'next/link';
 type StoreProps = {};
 
 const Store = (props: StoreProps) => {
@@ -27,12 +28,13 @@ const Store = (props: StoreProps) => {
         </div>
         <div className="flex w-full flex-wrap  ">
           {dataProduct.map((item: any) => (
-            <div
+            <Link
               key={item.id}
+              href={`/products/${item.id}`}
               className=" sm:w-full w-full xs:w-[50%] md:pl-6 pt-5 md:w-[50%] lg:w-[33.33%]  "
             >
               <Item active={item.active} data={item} />
-            </div>
+            </Link>
           ))}
         </div>
       </div>

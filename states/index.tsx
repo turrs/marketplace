@@ -8,6 +8,7 @@ import {
 } from 'react-redux';
 import { categoryReducer } from './Category/reducer';
 import { userReducer, usersLoginReducer } from './User/reducer';
+import { cartReducer } from './Cart/reducer';
 
 const store = configureStore({
   reducer: {
@@ -15,6 +16,7 @@ const store = configureStore({
     category: categoryReducer,
     users: userReducer,
     usersLogin: usersLoginReducer,
+    cart: cartReducer,
   },
 });
 

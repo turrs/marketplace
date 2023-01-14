@@ -20,12 +20,10 @@ export default function catalog() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className=" relative bg-background">
-        <div className="hidden md:block gradient-02 inset-01 absolute w-[50%]" />
+      <main className=" relative bg-white">
         <Headers />
         <Navbar />
         <CategorySection />
-        <div className="hidden md:block gradient-02 inset-0 absolute w-[50%]" />
         <TitleCategory text="Catalog" />
         <Catalog />
         <div className="relative">
