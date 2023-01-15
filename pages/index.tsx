@@ -23,11 +23,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className=" relative">
-        <div className="hidden md:block gradient-02 inset-01 absolute w-[50%]" />
         <Headers />
         <Navbar />
         <CategorySection />
-        <div className="hidden md:block gradient-02 inset-0 absolute w-[50%]" />
+
         <TitleCategory text="Home" />
         <CategoryItem />
         <div className="py-12">

@@ -28,13 +28,12 @@ const Store = (props: StoreProps) => {
         </div>
         <div className="flex w-full flex-wrap  ">
           {dataProduct.map((item: any) => (
-            <Link
+            <div
               key={item.id}
-              href={`/products/${item.id}`}
               className=" sm:w-full w-full xs:w-[50%] md:pl-6 pt-5 md:w-[50%] lg:w-[33.33%]  "
             >
               <Item active={item.active} data={item} />
-            </Link>
+            </div>
           ))}
         </div>
       </div>

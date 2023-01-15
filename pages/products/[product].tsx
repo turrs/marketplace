@@ -6,10 +6,31 @@ import CategorySection from '../../section/CategorySection';
 import TitleCategory from '../../components/TitleCategory';
 import FooterSection from '../../section/FootersSection';
 import ItemDetail from '../../components/ItemDetail';
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
+import { ApiProduct } from '../../utils/API';
 
 type itemProps = {};
 
 const product = (props: itemProps) => {
+  const router = useRouter();
+  const [loading, setLoading] = useState<boolean>(true);
+  const [singleProduct, setSingleProduct] = useState<any>();
+  const getDataProduct = async (id: any) => {
+    setLoading(true);
+    const response = await ApiProduct.getSingleProduct(id);
+    setSingleProduct(response);
+    setLoading(false);
+  };
+  useEffect(() => {
+    if (!router.isReady) {
+      setLoading(true);
+    }
+    if (router.isReady) {
+      getDataProduct(router.query.product);
+    }
+    // codes using router.query
+  }, [router.isReady]);
   return (
     <>
       <Head>
@@ -19,12 +40,11 @@ const product = (props: itemProps) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className=" relative bg-background">
-        <div className="hidden md:block gradient-02 inset-01 absolute w-[50%]" />
         <Headers />
         <Navbar />
-        <div className="hidden md:block gradient-02 inset-0 absolute w-[50%]" />
+
         <div className="py-20">
-          <ItemDetail />
+          {!loading && <ItemDetail data={singleProduct} />}
         </div>
         <FooterSection />
       </main>

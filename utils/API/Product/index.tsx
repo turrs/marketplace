@@ -5,8 +5,13 @@ const ApiProduct = (() => {
     const response = await fakeStoreApi.get('/products');
     return response.data;
   }
+  async function getSingleProduct(id: any) {
+    const response = await fakeStoreApi.get(`/products/${id}`);
+    return response.data;
+  }
   return {
     getProductData,
+    getSingleProduct,
   };
 })();
 

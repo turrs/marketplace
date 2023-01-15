@@ -36,12 +36,16 @@ const Navbar = (props: NavbarProps) => {
           </div>
         </div>
         <div className="md:w-1/2 w-full flex justify-between  md:pl-12 sm:pl-16 pl-8  md:justify-around w-full items-center">
-          <div className="hidden md:block">
-            <MenuIcon count={cart.length} />
-          </div>
-          <p className="text-black text-[12px] md:text-[16px] font-extrabold">
-            20.000.000 IDR
-          </p>
+          {user.id !== undefined && (
+            <>
+              <div className="hidden md:block">
+                <MenuIcon count={cart.length} />
+              </div>
+              <p className="text-black text-[12px] md:text-[16px] font-extrabold">
+                20.000.000 IDR
+              </p>
+            </>
+          )}
         </div>
       </div>
     </section>

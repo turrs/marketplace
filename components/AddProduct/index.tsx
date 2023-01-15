@@ -7,11 +7,7 @@ const AddProduct = (props: AddProductProps) => {
   const [showModal, setShowModal] = useState<any | null>(false);
   return (
     <>
-      <Button
-        text="Додати відгук"
-        image=""
-        onClick={() => setShowModal(!showModal)}
-      />
+      <Button text="Buy" image="" onClick={() => setShowModal(!showModal)} />
       {showModal ? (
         <>
           <div className="fixed inset-0 z-10 overflow-y-auto shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]  ">

@@ -11,7 +11,7 @@ const CategoryItem = (props: CategoryItemProps) => {
         {category.map((item: any) => (
           <div
             key={item.title}
-            className="md:w-[25%] px-1 w-[50%] relative  rounded-[24px]"
+            className="md:w-[25%] p-1  w-[50%] relative  rounded-[24px]"
           >
             <img
               src="./icon/imagecategory.jpg"

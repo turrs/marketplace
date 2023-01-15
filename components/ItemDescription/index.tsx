@@ -2,11 +2,14 @@ import React, { useState } from 'react';
 import AddProduct from '../AddProduct';
 import Button from '../Button';
 
-type ItemDescriptionProps = {};
+type ItemDescriptionProps = {
+  data: any;
+};
 
-const ItemDescription = (props: ItemDescriptionProps) => {
+const ItemDescription = ({ data }: ItemDescriptionProps) => {
   const [active, setActive] = useState<any | null>('description');
   const [showModal, setShowModal] = useState<any | null>(false);
+  console.log(data);
   const changeTab = (value: String) => {
     switch (value) {
       case 'description':
@@ -29,7 +32,7 @@ const ItemDescription = (props: ItemDescriptionProps) => {
               active === 'description' ? 'text-white' : 'text-black'
             }`}
           >
-            Опис
+            Description
           </p>
         </div>
         <div
@@ -43,7 +46,7 @@ const ItemDescription = (props: ItemDescriptionProps) => {
               active === 'review' ? 'text-white' : 'text-black'
             }`}
           >
-            Відгуки
+            Reviews
           </p>
         </div>
       </div>
@@ -53,7 +56,7 @@ const ItemDescription = (props: ItemDescriptionProps) => {
         } `}
       >
         {active === 'description' ? (
-          <div>qwer </div>
+          <div>{data.description} </div>
         ) : (
           <div>
             <div className="flex">
@@ -70,7 +73,7 @@ const ItemDescription = (props: ItemDescriptionProps) => {
             <div>
               <div className="w-[220px]">
                 <Button
-                  text="Додати відгук"
+                  text="Add review"
                   onClick={() => console.log('test')}
                   image=""
                 />
