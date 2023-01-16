@@ -17,7 +17,9 @@ const Store = (props: StoreProps) => {
   const dataProduct = useAppSelector((state) => state.product);
 
   useEffect(() => {
-    getProductData();
+    if (dataProduct.length === 0) {
+      getProductData();
+    }
   }, []);
   return (
     <div className={`${styles.xPaddings} w-full `}>

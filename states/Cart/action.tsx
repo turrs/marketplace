@@ -4,7 +4,17 @@ import { AppDispatch } from '..';
 const TypeAction = {
   SET_ALL_CART_USER: 'SET_ALL_CART_USER',
   SET_DELETE_ALL_CART: 'SET_DELETE_ALL_CART',
+  SET_ADD_CART: 'SET_ADD_CART',
 };
+
+function setAddCart(data: any) {
+  return {
+    type: TypeAction.SET_ADD_CART,
+    payload: {
+      data,
+    },
+  };
+}
 
 function setDeleteAllCart() {
   return {
@@ -33,4 +43,10 @@ function asyncGetAllCartUser(id: number) {
   };
 }
 
-export { TypeAction, setAllCartUser, asyncGetAllCartUser, setDeleteAllCart };
+export {
+  TypeAction,
+  setAllCartUser,
+  asyncGetAllCartUser,
+  setDeleteAllCart,
+  setAddCart,
+};

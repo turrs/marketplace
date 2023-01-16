@@ -26,7 +26,6 @@ export default function Home() {
         <Headers />
         <Navbar />
         <CategorySection />
-
         <TitleCategory text="Home" />
         <CategoryItem />
         <div className="py-12">

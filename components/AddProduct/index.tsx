@@ -15,7 +15,7 @@ const AddProduct = (props: AddProductProps) => {
               className="fixed inset-0 w-full h-full bg-black opacity-40"
               onClick={() => setShowModal(false)}
             />
-            <div className="flex  min-h-screen  -px-2  justify-center py-8">
+            <div className="flex   -px-2  justify-center py-8">
               <div className="relative w-full max-w-lg p-6 mx-auto  bg-white rounded-md shadow-lg">
                 <div className="mt-3 sm:flex w-full">
                   <div className="mt-2 text-center sm:ml-1 sm:text-left w-full">

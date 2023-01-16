@@ -42,7 +42,7 @@ const product = (props: itemProps) => {
       <main className=" relative bg-background">
         <Headers />
         <Navbar />
-
+        <CategorySection />
         <div className="py-20">
           {!loading && <ItemDetail data={singleProduct} />}
         </div>

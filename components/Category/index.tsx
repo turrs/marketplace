@@ -1,12 +1,24 @@
+import { useRouter } from 'next/router';
 import React from 'react';
+import { useAppDispatch } from '../../states';
+import { asyncSetCategoryProduct } from '../../states/Product/action';
 
 type CategoryProps = {
   item: string;
 };
 
 const Category = ({ item }: CategoryProps) => {
+  const dispatch = useAppDispatch();
+  const route = useRouter();
+  const handleFilter = (item: any) => {
+    dispatch(asyncSetCategoryProduct(item));
+    route.push('/catalog');
+  };
   return (
-    <div className="flex flex-row px-10  h-[40px] items-center justify-center border-solid border-green border-2 rounded-[24px]">
+    <div
+      onClick={() => handleFilter(item)}
+      className="flex hover:cursor-pointer flex-row px-10  h-[40px] items-center justify-center border-solid border-green border-2 rounded-[24px]"
+    >
       <div className="px-4">
         <img src="/icon/seeds2.svg" className="w-[24px] h-[24px] " />
       </div>

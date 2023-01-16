@@ -3,7 +3,19 @@ import { AppDispatch } from '..';
 
 const TypeAction = {
   SET_ALL_PRODUCT: 'SET_ALL_PRODUCT',
+  SET_CATEGORY_PRODUCT: 'SET_CATEGORY_PRODUCT',
 };
+
+function asyncSetCategoryProduct(category: any) {
+  return async (AppDispatch: any) => {
+    try {
+      const response = await ApiProduct.getCategoryProduct(category);
+      AppDispatch(setAllProduct(response));
+    } catch (error) {
+      console.log(error);
+    }
+  };
+}
 
 function setAllProduct(data: any) {
   return {
@@ -25,4 +37,9 @@ function asyncSetAllProduct() {
   };
 }
 
-export { TypeAction, setAllProduct, asyncSetAllProduct };
+export {
+  TypeAction,
+  setAllProduct,
+  asyncSetAllProduct,
+  asyncSetCategoryProduct,
+};

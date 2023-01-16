@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
+import { useAppDispatch } from '../../states';
+import { setAddCart } from '../../states/Cart/action';
 
 type ItemProps = {
   active: boolean;
@@ -7,6 +9,11 @@ type ItemProps = {
 };
 
 const Item = ({ active, data }: ItemProps) => {
+  const dispatch = useAppDispatch();
+  const handleAddCart = (data: any) => {
+    console.log(55, data);
+    dispatch(setAddCart(data));
+  };
   return (
     <div className="shadow-[0_3px_10px_rgb(0,0,0,0.2)]  flex relative flex-col w-full bg-white rounded-[24px]  ">
       <img src="./icon/iconscales.svg" className="absolute right-0 p-5" />
@@ -36,6 +43,7 @@ const Item = ({ active, data }: ItemProps) => {
               </div>
               <div>
                 <div
+                  onClick={() => handleAddCart(data)}
                   className={`${
                     active ? 'bg-brown' : ' bg-white'
                   } rounded-full p-3 hover:cursor-pointer`}

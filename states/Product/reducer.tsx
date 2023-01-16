@@ -1,16 +1,7 @@
 import { TypeAction } from './action';
 import { ProjectActionTypes } from './type';
 
-const initialState = [
-  {
-    id: 1,
-    title: '...',
-    price: '...',
-    category: '...',
-    description: '...',
-    image: '...',
-  },
-];
+const initialState: any = [];
 
 function productReducer(
   productState = initialState,
