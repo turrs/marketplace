@@ -12,7 +12,7 @@ import { ApiProduct } from '../../utils/API';
 
 type itemProps = {};
 
-const product = (props: itemProps) => {
+const Product = (props: itemProps) => {
   const router = useRouter();
   const [loading, setLoading] = useState<boolean>(true);
   const [singleProduct, setSingleProduct] = useState<any>();
@@ -52,4 +52,4 @@ const product = (props: itemProps) => {
   );
 };
 
-export default product;
+export default Product;

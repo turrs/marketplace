@@ -10,13 +10,13 @@ type CategoryProps = {
 const Category = ({ item }: CategoryProps) => {
   const dispatch = useAppDispatch();
   const route = useRouter();
-  const handleFilter = (item: any) => {
+  const HandleFilter = (item: any) => {
     dispatch(asyncSetCategoryProduct(item));
     route.push('/catalog');
   };
   return (
     <div
-      onClick={() => handleFilter(item)}
+      onClick={() => HandleFilter(item)}
       className="flex hover:cursor-pointer flex-row px-10  h-[40px] items-center justify-center border-solid border-green border-2 rounded-[24px]"
     >
       <div className="px-4">

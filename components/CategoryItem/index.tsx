@@ -9,7 +9,7 @@ const CategoryItem = (props: CategoryItemProps) => {
   const category = useAppSelector((state) => state.category);
   const dispatch = useAppDispatch();
   const route = useRouter();
-  const handleFilter = (item: any) => {
+  const HandleFilter = (item: any) => {
     dispatch(asyncSetCategoryProduct(item));
     route.push('/catalog');
   };
@@ -18,7 +18,7 @@ const CategoryItem = (props: CategoryItemProps) => {
       <div className="flex flex-row w-full  justify-around flex-wrap   max-w-[1200px]">
         {category.map((item: any) => (
           <div
-            onClick={() => handleFilter(item)}
+            onClick={() => HandleFilter(item)}
             key={item.title}
             className="md:w-[25%] p-1 hover:cursor-pointer w-[50%] relative  rounded-[24px]"
           >
